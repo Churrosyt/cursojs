@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+   <style>
+       body{
+           background-color: rgb(95, 95, 95);
+           text-align: center;
+           font: 18pt Arial;
+           color: aliceblue;
+        
+     }
+     div#res{
+            color: aliceblue;
+     }
+     input#txtvac{
+         background-color: aliceblue;
+         border: 0ch;
+     }
+       
+
+
+
+   </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="copo"> <h1><strong>TESTANDO NACIONALIDADES<strong></h1> 
+        <br>
+        <br>
+    VOCÊ NASCEU EM QUAL PAÍS? <input type="text" name="txtvac" id="txtvac">
+    <input type="button"value="TESTAR" id="testar" onclick="testar()">
+    <div id="res">
+
+    </div>
+    </div>
+   <script>
+       function testar() {
+     var país = document.querySelector('input#txtvac')
+     var res = document.querySelector('div#res')
+     var vacx = String(país.value).toLowerCase()
+
+        res.innerHTML += `<p> Íncrivel Você Nasceu no <strong>${país.value}<strong><p>`
+
+         if (vacx == 'brasil'){
+            res.innerHTML += "<p>Você é Brasilero, espero que você esteja bem meu bom.<p>"
+         } 
+         else if (vacx == 'estados unidos') {
+            res.innerHTML += "<p>You're American.<p>"
+            }
+         else {
+        res.innerHTML += "<p>you're not Brazilian, but nice to meet you<p>"
+         }
+        res.innerHTML += "<p>Só uma pesquisa pro meu TCC.<p>"
+        }
+   </script>
+</body>
+</html>

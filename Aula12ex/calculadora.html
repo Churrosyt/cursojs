@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            background-color: aliceblue;
+            font: 18pt Arial;
+            text-align: center;
+            border-radius: 10px;
+        }
+        div {
+          text-align: center;
+        }
+        script{
+            border-radius: 10px;
+        }
+
+       
+    </style>    
+
+    
+</head>
+<body>
+
+       <br><br><br><br><br>
+    <h1>CALCULADORA</h1>
+    <input type="number" name="txtn1" id="txtn1"> x 
+    <input type="number" name="txtn2" id="txtn2"> 
+    <input type="button" value="SOMAR" onclick="somar()">
+
+    <br><br>
+<div id="res"></div>
+
+<script>
+    function somar() { 
+var txtn = document.getElementById('txtn1')
+var txtm = document.getElementById('txtn2')
+var res = document.getElementById ('res')
+var n1 = Number(txtn1.value)
+var n2 = Number(txtn2.value)
+var s = n1 * n2
+res.innerHTML = ` A SOMA DE ${n1} x ${n2} = ${s}  `
+
+    }
+</script>
+
+
+    
+</body>
+</html>
